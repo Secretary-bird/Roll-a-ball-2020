@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CmeraControler : MonoBehaviour
 {
@@ -15,6 +13,6 @@ public class CmeraControler : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        transform.position = player.tranform.position + offset;
+        transform.position = player.transform.position + offset;
     }
 }
