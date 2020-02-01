@@ -5,6 +5,7 @@ public class BallControler : MonoBehaviour
 {
     public float speed;
     public Text countText;
+    public Text winText;
 
     private Rigidbody rb;
     private int count;
@@ -13,6 +14,7 @@ public class BallControler : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         count = 0;
         SetCountText();
+        winText.text = "";
     }
 
     // Update is called once per frame
@@ -38,5 +40,9 @@ public class BallControler : MonoBehaviour
     {
 
         countText.text = "Count: " + count.ToString();
+        if (count >= 13)
+        {
+            winText.text = "Wow You Win!";
+        }
     }
 }
